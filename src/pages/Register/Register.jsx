@@ -1,8 +1,8 @@
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-
-const Login = () => {
-    const handleLogin = event => {
+const Register = () => {
+    const handleRegister = event => {
         event.preventDefault();
         const form = event.target;
 
@@ -17,18 +17,18 @@ const Login = () => {
                     <h1 className="text-5xl font-bold">Login now!</h1>
                 </div>
                 <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-                    <form onSubmit={handleLogin} className="card-body">
+                    <form onSubmit={handleRegister} className="card-body">
                         <div className="form-control">
                             <input type="email" name="email" placeholder="email" className="input input-bordered" required />
                         </div>
                         <div className="form-control">
                             <input type="password" name="password" placeholder="password" className="input input-bordered" required />
                             <label className="label">
-                                Do not have an account? <Link to='/register' className="link link-hover">Register Now</Link>
+                                Already have an account? <Link to='/login' className="link link-hover">Login Now</Link>
                             </label>
                         </div>
                         <div className="form-control mt-6">
-                            <input type='submit' className="btn btn-primary" value='Login' />
+                            <input type='submit' className="btn btn-primary" value='Register' />
                         </div>
                     </form>
                 </div>
@@ -37,4 +37,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default Register;

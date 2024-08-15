@@ -1,11 +1,11 @@
 import React from 'react';
 
-const BookingRow = ({ booking }) => {
+const BookingRow = ({ booking, handleDelete }) => {
     const { username, email, description, image, price, duration, availability, _id } = booking;
     return (
         <tr>
             <th>
-                <button className="btn btn-circle btn-sm btn-primary">
+                <button onClick={()=> handleDelete(_id)} className="btn btn-circle btn-sm btn-primary">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         className="h-6 w-6"

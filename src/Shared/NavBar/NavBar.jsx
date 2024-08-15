@@ -9,6 +9,9 @@ const NavBar = () => {
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/'>About</Link></li>
         <li><Link to='/'>Services</Link></li>
+        {
+            user && <li><Link to='/bookings'>Bookings</Link></li>
+        }
     </>
     const handleSignOUt = () => {
         signOutUser()
